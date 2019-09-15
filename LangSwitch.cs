@@ -8,7 +8,7 @@ using UnityEngine;
 using System;
 using mulova.commons;
 
-namespace i18n
+namespace mulova.i18n
 {
     public class LangSwitch : MonoBehaviour {
         private static SystemLanguage lang;

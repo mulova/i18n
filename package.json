@@ -1,11 +1,11 @@
 
 {
-	"name": "com.mulova.uiswitch",
-	"displayName": "com.mulova.uiswitch",
+	"name": "com.mulova.i18n",
+	"displayName": "mulova.i18n",
 	"version": "0.0.1",
 	"unity": "2018.1",
-	"description": "common unity library",
-	"keywords": ["mulova", "uiswitch"],
+	"description": "i18n",
+	"keywords": ["mulova", "i18n"],
 	"category": "mulova",
 	"dependencies": {
 	}

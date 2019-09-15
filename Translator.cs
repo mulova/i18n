@@ -6,7 +6,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace i18n
+namespace mulova.i18n
 {
 	public class Translator
 	{
