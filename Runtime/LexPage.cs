@@ -15,7 +15,7 @@ namespace mulova.i18n
 		private Dictionary<string, int> columnTitles = new Dictionary<string, int> ();
 		private int motherLangCol = -1;
 		private int selectedCol = 0;
-        private static Loggerx log = LogManager.GetLogger (typeof(LexPages));
+        private static ILogger log = LogManager.GetLogger (typeof(LexPages));
 
 		public LexPage(string name, int no) {
 			this.no = no;
@@ -112,7 +112,7 @@ namespace mulova.i18n
 						{
 							conflict.Add(transKey);
 							translator.Remove(transKey);
-							log.Info("Same value exists. Translation fails for {0}", transKey);
+							log.Debug("Same value exists. Translation fails for {0}", transKey);
 						} else 
 						{
 							translator[transKey] = pair.Key;

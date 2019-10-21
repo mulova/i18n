@@ -9,6 +9,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System;
 using System.Text.Ex;
+using mulova.commons;
 
 namespace mulova.i18n
 {

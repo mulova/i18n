@@ -10,12 +10,13 @@ using System.Text;
 using System.Reflection;
 using System.Text.Ex;
 using System.Collections.Generic.Ex;
+using mulova.commons;
 
 namespace mulova.i18n
 {
 	public class SpreadSheet
 	{
-        public static Loggerx log = LogManager.GetLogger(typeof(SpreadSheet));
+        public static ILogger log = LogManager.GetLogger(typeof(SpreadSheet));
 		protected List<Sheet> sheets = new List<Sheet>();
 		private int sheetNo = 0;
 		private int rowNo = -1;

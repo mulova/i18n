@@ -16,7 +16,7 @@ namespace mulova.i18n
 		private LexPage currentPage;
         private object lang;
 		
-        public static Loggerx log = LogManager.GetLogger(typeof(LexPages));
+        public static ILogger log = LogManager.GetLogger(typeof(LexPages));
 		
 		/// <summary>
 		/// The first row of each sheet is considered as a title row
@@ -196,7 +196,7 @@ namespace mulova.i18n
 					return msg;
 				}
 			}
-			log.Info("No Message for key '{0}'", id);
+			log.Debug("No Message for key '{0}'", id);
 			return id;
 		}
 
