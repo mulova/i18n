@@ -4,8 +4,6 @@ using System.Text.Ex;
 using mulova.commons;
 using UnityEngine;
 using UnityEngine.Ex;
-using ILogger = mulova.commons.ILogger;
-using LogType = mulova.commons.LogType;
 
 namespace mulova.i18n
 {
@@ -16,7 +14,7 @@ namespace mulova.i18n
         // key: id,  value: lexicon_id
         private static readonly Dictionary<string, string> invAltMap = new Dictionary<string, string>();
         private static readonly HashSet<string> conflict = new HashSet<string>();
-        public static readonly ILogger log = LogManager.GetLogger(typeof(Lexicon));
+        public static readonly ILog log = LogManager.GetLogger(typeof(Lexicon));
         public delegate string GetTitleName(SystemLanguage lang);
         public static GetTitleName getTitle = t=> t.ToString();
 
@@ -162,7 +160,7 @@ namespace mulova.i18n
                     }
                 }
             }
-            if (log.IsLoggable(LogType.Log))
+            if (log.IsLoggable(LogLevel.Log))
             {
                 log.Debug("Duplicate Message Key: {0}", conflict.Join(","));
             }

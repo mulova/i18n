@@ -16,7 +16,7 @@ namespace mulova.i18n
 		private LexPage currentPage;
         private object lang;
 		
-        public static ILogger log = LogManager.GetLogger(typeof(LexPages));
+        public static ILog log = LogManager.GetLogger(typeof(LexPages));
 		
 		/// <summary>
 		/// The first row of each sheet is considered as a title row

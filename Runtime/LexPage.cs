@@ -15,7 +15,7 @@ namespace mulova.i18n
 		private Dictionary<string, int> columnTitles = new Dictionary<string, int> ();
 		private int motherLangCol = -1;
 		private int selectedCol = 0;
-        private static ILogger log = LogManager.GetLogger (typeof(LexPages));
+        private static ILog log = LogManager.GetLogger (typeof(LexPages));
 
 		public LexPage(string name, int no) {
 			this.no = no;
