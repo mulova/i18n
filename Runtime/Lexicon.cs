@@ -14,7 +14,7 @@ namespace mulova.i18n
         // key: id,  value: lexicon_id
         private static readonly Dictionary<string, string> invAltMap = new Dictionary<string, string>();
         private static readonly HashSet<string> conflict = new HashSet<string>();
-        public static readonly ILog log = LogManager.GetLogger(typeof(Lexicon));
+        public static readonly ILog log = LogManager.GetLogger(nameof(Lexicon));
         public delegate string GetTitleName(SystemLanguage lang);
         public static GetTitleName getTitle = t=> t.ToString();
 

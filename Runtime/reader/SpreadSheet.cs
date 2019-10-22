@@ -16,7 +16,7 @@ namespace mulova.i18n
 {
 	public class SpreadSheet
 	{
-        public static ILog log = LogManager.GetLogger(typeof(SpreadSheet));
+        public static ILog log = LogManager.GetLogger(nameof(SpreadSheet));
 		protected List<Sheet> sheets = new List<Sheet>();
 		private int sheetNo = 0;
 		private int rowNo = -1;
