@@ -51,15 +51,15 @@ namespace mulova.i18n
 		
 		public bool SetColumn(object columnName)
 		{
-			return columnTitles.TryGetValue(columnName.ToText(), out selectedCol);
+			return columnTitles.TryGetValue(columnName.ToString(), out selectedCol);
 		}
 
 		public void AddColumn(object columnName) {
-			columnTitles.Add(columnName.ToText(), columnTitles.Count);
+			columnTitles.Add(columnName.ToString(), columnTitles.Count);
 		}
 
 		public int GetColumnNo(object columnName) {
-			return columnTitles.Get(columnName.ToText(), -1);
+			return columnTitles.Get(columnName.ToString(), -1);
 		}
 
 		public void SetValue(string rowKey, string columnName, string val) {
@@ -101,7 +101,7 @@ namespace mulova.i18n
 		public bool SetMotherLanguage(object langFrom)
 		{
 			HashSet<string> conflict = new HashSet<string>();
-			if (columnTitles.TryGetValue(langFrom.ToText(), out motherLangCol)) {
+			if (columnTitles.TryGetValue(langFrom.ToString(), out motherLangCol)) {
 				translator.Clear();
 				foreach (KeyValuePair<string, string[]> pair in sheet) {
 					if (motherLangCol < pair.Value.Length)
