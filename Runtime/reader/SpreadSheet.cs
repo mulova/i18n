@@ -11,6 +11,7 @@ using System.Reflection;
 using System.Text.Ex;
 using System.Collections.Generic.Ex;
 using mulova.commons;
+using System.Ex;
 
 namespace mulova.i18n
 {
@@ -127,7 +128,7 @@ namespace mulova.i18n
 			Dictionary<FieldInfo, A> fields = new Dictionary<FieldInfo, A>();
 			foreach (FieldInfo f in t.GetFields(flags))
 			{
-                A attr = ReflectionUtil.GetAttribute<A>(f);
+                A attr = f.GetAttribute<A>();
 				if (attr != null)
 				{
 					fields[f] = attr;
