@@ -31,8 +31,8 @@ namespace i18n
         protected override bool OnInspectorGUI(LangObj data, int i)
         {
             bool changed = false;
-            changed |= EditorGUILayoutUtil.PopupEnum<SystemLanguage>(null, ref data.lang);
-            changed |= EditorGUILayoutUtil.ObjectField<GameObject>(null, ref data.obj, true);
+            changed |= EditorGUILayoutEx.PopupEnum<SystemLanguage>(null, ref data.lang);
+            changed |= EditorGUILayoutEx.ObjectField<GameObject>(null, ref data.obj, true);
             return changed;
         }
         
